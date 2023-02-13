@@ -35,8 +35,8 @@ sudo apt install pkg-config build-essential libssl-dev curl jq git libleveldb-de
 sudo apt-get install manpages-dev -y
 ```
 ## Install go
+```
 curl https://dl.google.com/go/go1.18.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
-
 ```
 
 # Update environment variables to include go
@@ -50,10 +50,10 @@ EOF
 ```
 ```
 source $HOME/.profile
-
+```
 # check go version
+```
 go version
-
 ```
 
 ## Install ACREChain Node
@@ -64,7 +64,6 @@ cd acrechain
 git checkout v1.1.1
 make install
 cd
-acred version --long
 ```
 
 ## Create moniker
