@@ -33,23 +33,21 @@ su - node
 sudo apt update
 sudo apt install pkg-config build-essential libssl-dev curl jq git libleveldb-dev -y
 sudo apt-get install manpages-dev -y
-
-# install go
+```
+## Install go
 curl https://dl.google.com/go/go1.18.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 
 ```
 
-```
 # Update environment variables to include go
+```
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
-
 ```
-
 ```
 source $HOME/.profile
 
@@ -69,13 +67,7 @@ cd
 acred version --long
 ```
 
-You should get the following output:
-
-```
-# This section will be updated later once v1.1.1 is released
-```
-
-## create moniker
+## Create moniker
 
 ```
 #Choose a name for your validator and use it in place of “<moniker-name>” in the following command:
@@ -103,10 +95,10 @@ PEERS="ef28f065e24d60df275b06ae9f7fed8ba0823448@46.4.81.204:34656,e29de0ba5c6eb3
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.acred/config/config.toml
 ```
 
-## Running the validator as a systemd unit
+## Creating Service
 
 ```
-sudo tee /etc/systemd/system/planqd.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/acred.service > /dev/null <<EOF
 [Unit]
 Description=Acred Daemon
 #After=network.target
