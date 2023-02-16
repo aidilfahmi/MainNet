@@ -21,7 +21,7 @@ ufw enable
 adduser node
 
 # add user to sudoers
-usermod -aG sudo node
+adduser node sudo
 
 # login as user
 su - node
@@ -30,7 +30,7 @@ su - node
 ## Install Prerequisites
 
 ```
-sudo apt update
+sudo apt update -y && sudo apt upgrade -y
 sudo apt install pkg-config build-essential libssl-dev curl jq git libleveldb-dev -y
 sudo apt-get install manpages-dev -y
 ```
