@@ -65,9 +65,17 @@ git checkout v1.1.1
 make install
 cd
 ```
+## Verify version
+```
+acred version
+```
+## Config app
+```
+acred config chain-id acre_9052-1
+acred config keyring-backend file
+```
 
 ## Create moniker
-
 ```
 #Choose a name for your validator and use it in place of “<moniker-name>” in the following command:
 acred init <moniker-name> --chain-id acre_9052-1
