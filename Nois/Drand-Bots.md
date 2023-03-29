@@ -22,6 +22,9 @@ cp .env.example .env
 
 Edit Configuration with your own
 ```
+nano .env
+```
+```
 MNEMONIC="your_bot_wallet_mnemonic"
 ENDPOINT="https://nois-testnet.rpc.kjnodes.com/"
 # Optional 2nd endpoint used for broadcasting
