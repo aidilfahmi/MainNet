@@ -40,8 +40,8 @@ go version
 ### Get Binary
 ```
 cd $HOME
-git clone https://github.com/BBlockLabs/BonusBlock-chain
-cd BonusBlock-chain
+git clone https://github.com/noislabs/noisd
+cd noisd/
 git checkout v1.0.0
 make build
 
